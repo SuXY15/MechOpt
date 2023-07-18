@@ -1,0 +1,20 @@
+description: |-
+  LLNL-MI-536371
+
+generator: ck2yaml
+input-files: [EMU40_nc7h16.inp, nc7_ver3.1_therm.dat]
+cantera-version: 2.5.1
+date: Fri, 30 Jul 2021 17:13:19 +0800
+
+units: {length: cm, time: s, quantity: mol, activation-energy: K}
+
+phases:
+- name: gas
+  thermo: ideal-gas
+  elements: [H, O, C, N, Ar]
+  species: [CH4, CO, HO2, H2O, H2, N2, O2, CO2, C2H6, AR, NC7H16, H2O2,
+    OH, CH3, CH3O, CH2O, CH3O2, HCO, C7H15-1, C7H15-2, C7H15O2, C7H14O2H,
+    C7H14O2HO2, C7KET21, C6H12, C5H11CO, C5H11, C4H9, C3H7, C3H6, C3H5,
+    C3H4, C2H3, C2H4, C2H5, O, C3H8, CH3CHO, CH3CO, H]
+  kinetics: gas
+  state: {T: 300.0, P: 1 atm}

@@ -1,0 +1,25 @@
+# mechanism files, will be sorted in alphabeta orders (i.e.: GRI30, SK23, SK23OP)
+# in validation process, the three mechanisms are used
+# in optimization process, the first two mechanism are used
+mechs:
+  LLNLv3.1:  "mechanism/nc7_ver3.1_mech.yaml"
+  LM_184:   "mechanism/LM184.yaml"
+  LU_SK188:   "mechanism/Lu_sk188.yaml"
+  LU_SK88:   "mechanism/Lu_sk88.yaml"
+  LU_SK68:   "mechanism/Lu_sk68.yaml"
+  Nordin42:  "mechanism/nc7h16_nordin1998.yaml"
+  TU_SK30:   "mechanism/TU2011_SK30.yaml"
+  # VdU_FM7:   "mechanism/VdU_FM7.yaml" # cannot compute
+# general settings reaction simulation
+fuel:
+  C7H16: 1.0
+oxyd:
+  O2: 11.0
+  N2: 41.36
+dTign: 400
+dTabort: 800
+
+# settings for validation
+phi_arr: [0.5, 1.0 , 1.5]
+P_arr: [10, 20, 40]
+T0_arr: [700, 750, 800, 850, 900, 950, 1000, 1100, 1200, 1300, 1400]

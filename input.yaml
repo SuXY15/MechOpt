@@ -1,0 +1,9 @@
+is_restart: true
+# expr_name: ./results/gri30_sk23_op
+# expr_name: ./results/nordin_sk34_op
+expr_name: ./results/nordin_sk34_op_npr=1
+# expr_name: ./results/nordin_sk34_op_npr=3
+# expr_name: ./results/nordin_sk34_op_npr=1_meangrad
+# expr_name: ./results/TU2011_sk30_op
+
+# expr_name: ./results/n-heptane_valid

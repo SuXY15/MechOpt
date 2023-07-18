@@ -1,0 +1,45 @@
+# mechanism files, will be sorted in alphabeta orders (i.e.: GRI30, SK23, SK23OP)
+# in validation process, the three mechanisms are used
+# in optimization process, the first two mechanism are used
+mechs:
+  nordin:        "mechanism/nc7h16_nordin1998.yaml"
+  nordin_sk34:   "mechanism/nordin_34s121r.yaml"
+  nordin_sk34op: "mechanism/nordin_34s121r_op1mg.yaml"
+
+# general settings reaction simulation
+fuel:
+  C7H16: 1.0
+oxyd:
+  O2: 11.0
+  N2: 41.36
+dTign: 500
+dTabort: 800
+
+# settings for validation
+phi_arr: [0.5, 1.0, 1.5]
+P_arr: [10, 30, 60]
+T0_arr: [650, 700, 750, 800, 850, 900, 950, 1000, 1100, 1200, 1300, 1400, 1600]
+
+# general optimization settings
+lr: 2e-3
+weight_decay: 1.e-4
+ind_sl: []
+
+# settings for ignition delay optimization
+n_exp: 500
+
+# settings for flame speed optimization
+optimize_flame_speed: false
+
+# range of conditions
+phi:
+  lb: 0.5
+  ub: 2.0
+
+pressure:
+  lb: 1.0
+  ub: 50.0
+
+temperature:
+  lb: 700.0
+  ub: 1600.0

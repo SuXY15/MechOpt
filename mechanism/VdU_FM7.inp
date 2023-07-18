@@ -1,0 +1,19 @@
+ELEMENTS
+H C O N AR
+END
+
+SPECIES
+C7H16      C7H15     C7H15O2     C7H14O2H     C3H6    C2H5 
+CH2O       CO          CO2             HO2               H2O2         H2O
+O2            OH          N2              AR
+END
+
+REACTIONS CAL/MOLE  MOLES
+C7H16+O2=>C7H15+HO2                                         4.000E+13           0.0          50150.1
+C7H16+OH=>C7H15+H2O                                        4.800E+09           1.3          690.5
+C7H15+O2=>C7H15O2                                             7.540E+12            0.0          0.0
+C7H15O2=>C7H14O2H                                             1.50E+10              0.0          20380
+C7H14O2H+O2=>C2H5+C3H6+CO+CH2O+2OH      6.500E+10            0.0          0.0
+HO2+HO2=>H2O2+O2                                             2.000E+14            0.0          0.0
+CH2O+OH+O2=>HO2+CO+H2O                              3.50E+14              0.0          0.0
+END

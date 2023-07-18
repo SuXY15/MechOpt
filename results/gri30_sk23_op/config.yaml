@@ -1,0 +1,56 @@
+# mechanism files, will be sorted in alphabeta orders (i.e.: GRI30, SK23, SK23OP)
+# in validation process, the three mechanisms are used
+# in optimization process, the first two mechanism are used
+mechs:
+  GRI30:  "mechanism/gri30.yaml"
+  SK23:   "mechanism/gri30_sk25.yaml" # sk25 is sk23 added with NO and AR, but no reactions added
+  SK23OP: "mechanism/gri30_sk25_op.yaml"
+
+# general settings reaction simulation
+fuel:
+  CH4: 1.00
+  C2H6: 0.0
+  C3H8: 0.0
+oxyd:
+  O2: 2.0
+  N2: 7.52
+dTign: 400
+dTabort: 800
+
+# settings for validation
+phi_arr: [0.5, 1.0 , 1.5]
+P_arr: [1, 10, 40]
+T0_arr: [900, 1000, 1100, 1200, 1300, 1400]
+
+# general optimization settings
+lr: 1e-3
+weight_decay: 1.e-6
+ind_sl: []
+
+# settings for ignition delay optimization
+n_exp: 1000
+
+# settings for flame speed optimization
+optimize_flame_speed: true
+n_exp_f: 100
+
+# range of conditions
+phi:
+  lb: 0.5
+  ub: 1.8
+
+pressure:
+  lb: 1.0
+  ub: 40.0
+
+temperature:
+  lb: 1000.0
+  ub: 2000.0
+
+aCH4:
+  lb: 0.85
+  ub: 1.00
+
+aC3H8:
+  lb: 0.00
+  ub: 0.05
